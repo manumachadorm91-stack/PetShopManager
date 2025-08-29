@@ -1,0 +1,2 @@
+Este archivo es solo un marcador de posición para el directorio de imágenes WPC.
+Aquí se deberían colocar las imágenes reales de productos WPC.

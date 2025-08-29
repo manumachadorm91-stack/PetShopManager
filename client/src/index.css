@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 6%; /* #0F0F0F - Negro profundo */
+  --foreground: 45 85% 65%; /* #D4AF37 - Dorado */
+  --muted: 0 0% 15%; /* #262626 - Gris oscuro */
+  --muted-foreground: 45 20% 55%; /* #8B7D5B - Dorado apagado */
+  --popover: 0 0% 9%; /* #171717 - Negro suave */
+  --popover-foreground: 45 85% 65%; /* #D4AF37 - Dorado */
+  --card: 0 0% 9%; /* #171717 - Negro suave */
+  --card-foreground: 45 85% 65%; /* #D4AF37 - Dorado */
+  --border: 0 0% 20%; /* #333333 - Gris oscuro */
+  --input: 0 0% 20%; /* #333333 - Gris oscuro */
+  --primary: 45 85% 65%; /* #D4AF37 - Dorado */
+  --primary-foreground: 0 0% 6%; /* #0F0F0F - Negro */
+  --secondary: 45 30% 25%; /* #3A3520 - Dorado oscuro */
+  --secondary-foreground: 45 85% 65%; /* #D4AF37 - Dorado */
+  --accent: 45 30% 25%; /* #3A3520 - Dorado oscuro */
+  --accent-foreground: 45 85% 65%; /* #D4AF37 - Dorado */
+  --destructive: 0 62% 50%; /* #DC2626 - Rojo */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA - Blanco */
+  --warning: 40 100% 60%; /* #FFB72B - Naranja amarillento */
+  --warning-foreground: 0 0% 6%; /* #0F0F0F - Negro */
+  --ring: 45 85% 65%; /* #D4AF37 - Dorado */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 3%; /* #080808 - Negro más profundo */
+  --foreground: 45 90% 70%; /* #E6C547 - Dorado más brillante */
+  --muted: 0 0% 12%; /* #1F1F1F - Gris muy oscuro */
+  --muted-foreground: 45 15% 50%; /* #7A7058 - Dorado muy apagado */
+  --popover: 0 0% 6%; /* #0F0F0F - Negro profundo */
+  --popover-foreground: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --card: 0 0% 6%; /* #0F0F0F - Negro profundo */
+  --card-foreground: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --border: 0 0% 18%; /* #2E2E2E - Gris oscuro */
+  --input: 0 0% 18%; /* #2E2E2E - Gris oscuro */
+  --primary: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --primary-foreground: 0 0% 3%; /* #080808 - Negro profundo */
+  --secondary: 45 25% 20%; /* #312B1A - Dorado muy oscuro */
+  --secondary-foreground: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --accent: 45 25% 20%; /* #312B1A - Dorado muy oscuro */
+  --accent-foreground: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --destructive: 0 70% 55%; /* #E53E3E - Rojo */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA - Blanco */
+  --warning: 40 95% 65%; /* #FFB84D - Naranja dorado */
+  --warning-foreground: 0 0% 3%; /* #080808 - Negro profundo */
+  --ring: 45 90% 70%; /* #E6C547 - Dorado brillante */
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
